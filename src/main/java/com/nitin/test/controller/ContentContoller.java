@@ -27,7 +27,7 @@ public class ContentContoller {
         return new ResponseEntity<>("Test endpoint reached", HttpStatus.OK);
     }
 
-    @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.IMAGE_PNG_VALUE, MediaType.IMAGE_JPEG_VALUE})
+    @PostMapping(value = "/upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<?> uploadContent(
             @RequestPart("content") Content content,
             @RequestPart("file") MultipartFile file
